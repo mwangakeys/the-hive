@@ -1,0 +1,8 @@
+/tool fetch url=https://curl.se/ca/cacert.pem
+/certificate import file-name=cacert.pem
+/ip dns set servers=""
+/ip dns static add name=dns.nextdns.io address=45.90.28.0 type=A
+/ip dns static add name=dns.nextdns.io address=45.90.30.0 type=A
+/ip dns static add name=dns.nextdns.io address=2a07:a8c0:: type=AAAA
+/ip dns static add name=dns.nextdns.io address=2a07:a8c1:: type=AAAA
+/ip dns set use-doh-server=“https://dns.nextdns.io/298e86” verify-doh-cert=yes
